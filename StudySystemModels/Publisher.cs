@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace kursach_klient.Models
+﻿namespace StudySystem.Models
 {
     public class Publisher:Model
     {
@@ -16,6 +10,14 @@ namespace kursach_klient.Models
         public Publisher(int id): base(id)
         {
 
+        }
+        public Publisher(object[] items) : base((int)items[0])
+        {
+            Address = (string)items[1];
+            UrAddress = (string)items[2];
+            Name = (string)items[3];
+            Requisites = (string)items[4];
+            Mobile = (int)items[5];
         }
     }
 }
